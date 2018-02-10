@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dd0-Ni-Fhx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,6 +14,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="54Z-8Y-bsb">
+            <objects>
+                <navigationController id="dd0-Ni-Fhx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9zf-WM-hQR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LvL-cV-3ql"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHP-JR-BfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1319" y="107"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -63,7 +79,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JZG-T7-DbF" kind="presentation" id="WwD-g7-Dce"/>
+                                    <segue destination="JZG-T7-DbF" kind="show" id="f56-QZ-dGU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="album" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAh-zr-NL5">
@@ -76,13 +92,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="beh-Yc-zNI"/>
                     <connections>
-                        <segue destination="TLi-xu-Bpz" kind="presentation" identifier="toSecondView" id="Xsx-Ss-gOi"/>
+                        <segue destination="TLi-xu-Bpz" kind="show" identifier="toSecondView" id="h1q-Ki-RNp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="109"/>
+            <point key="canvasLocation" x="-300" y="108"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="eHg-1a-IpS">
@@ -144,26 +161,16 @@
                                     <action selector="Button4" destination="JZG-T7-DbF" eventType="touchUpInside" id="QfT-j7-vj4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvP-vu-aRt">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="6Zg-wh-jgA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="968-ao-v2L" kind="presentation" identifier="toalbum" id="o0r-nH-jz6"/>
+                        <segue destination="968-ao-v2L" kind="show" identifier="toalbum" id="o0r-nH-jz6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-w0-AeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="1011"/>
+            <point key="canvasLocation" x="-300" y="1011"/>
         </scene>
         <!--Album View Controller-->
         <scene sceneID="Ifc-nd-DbB">
@@ -247,16 +254,6 @@
                                     <action selector="Button4" destination="TLi-xu-Bpz" eventType="touchUpInside" id="Hjb-7Y-V52"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6a-IT-9gS">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="prl-XX-4he"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -266,14 +263,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VoJ-vy-HwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="109.29535232383809"/>
+            <point key="canvasLocation" x="894" y="107"/>
         </scene>
     </scenes>
     <resources>
         <image name="1720976l.jpg" width="400" height="600"/>
         <image name="923417ba.png" width="855" height="855"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="prl-XX-4he"/>
-    </inferredMetricsTieBreakers>
 </document>
