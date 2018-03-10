@@ -25,7 +25,7 @@ class AlbumViewController: UIViewController, UIScrollViewDelegate {
         imageArray = [UIImage(named:"img1.jpg")!,UIImage(named:"img2.jpg")!,UIImage(named:"img3.jpg")!, UIImage(named:"img1.jpg")!]
 
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = UIColor.gray
+        scrollView.backgroundColor = UIColor.white
         
         //表示窓のサイズと位置を指定
         scrollView.frame.size = CGSize(width: viewWidth, height: viewHeight)
